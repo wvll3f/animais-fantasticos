@@ -4,6 +4,7 @@ import TabNav from "./modules/tabnav";
 import Modal from "./modules/modal";
 import ScrollAnima from "./modules/scroll-anima";
 import Tooltip from "./modules/tooltip"
+import DropdownMenu from "./modules/dropdown-menu";
 import fetchAnimais from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
 
@@ -24,6 +25,9 @@ tooltip.init();
 
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
+
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
+dropdownMenu.init();
 
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
