@@ -5,6 +5,7 @@ import Modal from "./modules/modal";
 import ScrollAnima from "./modules/scroll-anima";
 import Tooltip from "./modules/tooltip"
 import DropdownMenu from "./modules/dropdown-menu";
+import MenuMobile from "./modules/menu-mobile";
 import fetchAnimais from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
 
@@ -28,6 +29,9 @@ scrollAnima.init();
 
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
+
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
 
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
