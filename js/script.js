@@ -7,7 +7,7 @@ import Tooltip from "./modules/tooltip"
 import DropdownMenu from "./modules/dropdown-menu";
 import Funcionamento from "./modules/funcionamento";
 import MenuMobile from "./modules/menu-mobile";
-import { Slide } from "./modules/slide";
+import SlideNav from "./modules/slide";
 import fetchAnimais from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
 
@@ -38,11 +38,10 @@ menuMobile.init();
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
 funcionamento.init();
 
-const slide = new SlideNav('.slide', '.slide-wrapper');
-slide.init();
-slide.addControl('.custom-controls');
-
-
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
