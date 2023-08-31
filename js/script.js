@@ -7,6 +7,7 @@ import Tooltip from "./modules/tooltip"
 import DropdownMenu from "./modules/dropdown-menu";
 import Funcionamento from "./modules/funcionamento";
 import MenuMobile from "./modules/menu-mobile";
+import { Slide } from "./modules/slide";
 import fetchAnimais from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
 
@@ -35,9 +36,12 @@ const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
-console.log(funcionamento);
-
 funcionamento.init();
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
+
 
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
